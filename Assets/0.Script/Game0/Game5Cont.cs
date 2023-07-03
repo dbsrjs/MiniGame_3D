@@ -9,14 +9,14 @@ public class Game5Cont : MonoBehaviour
     [SerializeField] private TMP_Text txt;
     [SerializeField] private AudioSource audioSource;
     [SerializeField] private Transform boss;
-
+    
     string[] strs = { "무", "궁", "화", "꽃", "이", "피", "었", "습", "니", "다" };
 
     string curStr;
     int strIndex = 0;
     float curTimer;
     float strDelayTime = 0f;
-    int waitTimer = 10; //시작 대기 시간
+    int waitTimer = 5; //시작 대기 시간
 
     bool isStart = false;
     bool isStop = false;
