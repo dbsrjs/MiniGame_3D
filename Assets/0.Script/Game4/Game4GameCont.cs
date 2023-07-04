@@ -17,7 +17,7 @@ public class Game4GameCont : MonoBehaviour
     [SerializeField] private Transform line;
     [SerializeField] private TMP_Text countTxt;
 
-    private float power = 1.5f;
+    private float power = 1.2f;     //ÀûÆÀ ¼Óµµ
     private State stace = State.Stop;
     private int count = 3;
 
@@ -31,7 +31,7 @@ public class Game4GameCont : MonoBehaviour
     private void Start()
     {
         Instance = this;
-        InvokeRepeating("Count", 1, 1);
+        InvokeRepeating("Count", 1, 1);    //CountDown
     }
     // Update is called once per frame
     void Update()
@@ -55,13 +55,13 @@ public class Game4GameCont : MonoBehaviour
     void Count()
     {
         countTxt.text = count.ToString();
-        Count();
+        count--;
 
         if (count < 0)
         {
             countTxt.text = string.Empty;
             stace = State.Play;
-            CancelInvoke("Update");
+            CancelInvoke("Count");
         }
     }
 }
