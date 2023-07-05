@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FollowCam : MonoBehaviour
+public class FollowCam_Game3 : MonoBehaviour
 {
     [SerializeField] Transform target;
 
@@ -11,8 +11,8 @@ public class FollowCam : MonoBehaviour
     {
         Vector3 pos = transform.position;
         pos.x = target.position.x;
-        pos.y = target.position.y + 2.5f;
-        pos.z = target.position.z - 2f;
+        pos.y = target.position.y + 5f;
+        pos.z = target.position.z - 5f;
 
         transform.position = Vector3.Lerp(target.position, pos, 1f);
     }
