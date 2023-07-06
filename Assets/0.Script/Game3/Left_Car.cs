@@ -4,18 +4,16 @@ using UnityEngine;
 
 public class Left_Car : MonoBehaviour
 {
-    [SerializeField] private GameObject[] prefab;
-    [SerializeField] private Transform[] parent;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    private float speed = 3f;
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.Translate(Vector3.back * Time.deltaTime * speed);
+
+        if (transform.position.x == -16f)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }

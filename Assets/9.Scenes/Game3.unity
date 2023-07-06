@@ -1018,7 +1018,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2061273982}
   - component: {fileID: 2061273983}
-  - component: {fileID: 2061273984}
   m_Layer: 0
   m_Name: '[ Car_Controller ]'
   m_TagString: Untagged
@@ -1050,7 +1049,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2061273981}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97a9d18ceebb6024aa7ab45a59f2e906, type: 3}
+  m_Script: {fileID: 11500000, guid: 03654045cde8d324f9673077783121da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   prefab:
@@ -1064,29 +1063,7 @@ MonoBehaviour:
   - {fileID: 1175571914}
   - {fileID: 326309700}
   - {fileID: 448884970}
---- !u!114 &2061273984
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2061273981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b560ae323cd7030498861f62feb95cdf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefab:
-  - {fileID: 4672754338408095317, guid: 819cc70540b9ec641a1ce8c34999e66d, type: 3}
-  - {fileID: 7318017633142386983, guid: 3856da5032ebd1843a79624239e3492f, type: 3}
-  - {fileID: 4294366092328078657, guid: 2fc03bd5478d50c47b627480318b66a6, type: 3}
-  - {fileID: 1777546524071051723, guid: c3a3e32a3d195024babd73d723f9a5d6, type: 3}
-  - {fileID: 2961652069685174767, guid: fd2f5e11934a44542abb00bc3a39071f, type: 3}
-  - {fileID: 4292539244822622297, guid: 42203e0f9df903b4989040dac7b20c5f, type: 3}
-  parent:
-  - {fileID: 359530391}
-  - {fileID: 1464478298}
-  - {fileID: 620570488}
+  player: {fileID: 1824339894860316}
 --- !u!1 &1018531433104764
 GameObject:
   m_ObjectHideFlags: 0

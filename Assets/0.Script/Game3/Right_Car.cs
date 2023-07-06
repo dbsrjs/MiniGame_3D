@@ -4,28 +4,30 @@ using UnityEngine;
 
 public class Right_Car : MonoBehaviour
 {
-    [SerializeField] private GameObject[] prefab;
-    [SerializeField] private Transform[] parent;
+    private float speed = 3f;
 
-    float time = 0.0f;
+    private Car car;
+    private FollowCam_Game3 cam;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
-        Instantiate(prefab[Random.Range(0, 3)], parent[Random.Range(0, 3)]);
+        car = GameObject.Find("[ Car_Controller ]").GetComponent<Car>();
+        cam = GameObject.Find("Main Camera").GetComponent<FollowCam_Game3>();
     }
-
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
+        transform.Translate(Vector3.forward * Time.deltaTime * speed);
 
-        if(time >= 2f)
+        if (transform.position.x <= -9f)
         {
-            Instantiate(prefab[Random.Range(0, 3)], parent[Random.Range(0, 3)]);
-            time = 0f;
+            Destroy(gameObject);
         }
+    }
 
-        
+    private void OnTriggerEnter(Collider other)
+    {
+        Destroy(car.player);
+        Destroy(cam);
     }
 }
