@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Right_Car : MonoBehaviour
 {
-    private float speed = 3f;
+    private float speed = 8f;
 
     private Car car;
     private FollowCam_Game3 cam;
 
     private void Start()
     {
-        car = GameObject.Find("[ Car_Controller ]").GetComponent<Car>();
+        car = GameObject.Find("[ Car_Controller(R) ]").GetComponent<Car>();
         cam = GameObject.Find("Main Camera").GetComponent<FollowCam_Game3>();
     }
     // Update is called once per frame

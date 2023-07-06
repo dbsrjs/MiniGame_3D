@@ -14,7 +14,7 @@ public class Car : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Instantiate(prefab[Random.Range(0, 6)], parent[Random.Range(0, 3)]);    //시작할 때 생성
+        Instantiate(prefab[Random.Range(0, 6)], parent[Random.Range(0, 5)]);    //시작할 때 생성
     }
 
     // Update is called once per frame
@@ -22,9 +22,9 @@ public class Car : MonoBehaviour
     {
         time += Time.deltaTime;
 
-        if (time >= 1.5f)
+        if (time >= 0.3f)
         {
-            Instantiate(prefab[Random.Range(0, 6)], parent[Random.Range(0, 3)]);    //2초 마다 생성
+            Instantiate(prefab[Random.Range(0, 6)], parent[Random.Range(0, 5)]);    //1.2초 마다 생성
             time = 0f;
         }
     }

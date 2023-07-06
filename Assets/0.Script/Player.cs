@@ -16,7 +16,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*
         if (Input.GetKeyDown(KeyCode.DownArrow))
         {
             m_animator.SetBool("Crouch", true);
@@ -25,7 +24,6 @@ public class Player : MonoBehaviour
         {
             m_animator.SetBool("Crouch", false);
         }
-        */
     }
 
     void OnTriggerEnter(Collider other)
